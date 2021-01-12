@@ -1,0 +1,25 @@
+{
+  "name": "JQuery-Hcode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Maarii72/JQuery-Hcode.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Maarii72/JQuery-Hcode/issues"
+  },
+  "homepage": "https://github.com/Maarii72/JQuery-Hcode#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "nedb": "^1.8.0"
+  }
+}
