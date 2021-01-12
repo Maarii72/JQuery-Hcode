@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Eventos no jQuery</title>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-4 col-xs-4">
+                    <div class="logo">
+                        <img src="img/logo-hcode.svg" alt="Logo da Hcode">
+                    </div>
+                </div>
+                <div class="col-md-8 col-sm-8 col-xs-8 title">
+                    <h1>Eventos no jQuery</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section>
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-md-12 col-sm-12 col-xs-12">
+
+                    <h3 class="text-center books"><u>Lista de Livros</u></h3>
+
+                    <button class="btn btn-info" id="btn_add_book">Adicionar Livro</button>
+                    <table class="table table-striped" id="books_list">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Autor</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Dom Quixote</td>
+                                <td>Miguel de Cervantes</td>
+                            </tr>
+                            <tr>
+                                <td>Guerra e Paz</td>
+                                <td>Liev Tolstói</td>
+                            </tr>
+                            <tr>
+                                <td>Dom Casmurro</td>
+                                <td>Machado de Assis</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+
+            </div>
+
+            <div class="row formulario">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+
+                    <h3 class="text-center register"><u>Formulário de Cadastro</u></h3>
+
+                    <form id="form_login">
+
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6">
+                                <div class="form-group">
+                                    <label for="form_username">Nome de usuário</label>
+                                    <input type="text" class="form-control" name="username" id="form_username" placeholder="Digite seu nome...">
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-sm-6">
+                                <div class="form-group">
+                                    <label for="form_password">Senha</label>
+                                    <input type="password" class="form-control" name="password" id="form_password" placeholder="Digite sua senha...">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-md-6 col-sm-6">
+                                <div class="form-group">
+                                    <label for="form_state">Estado</label>
+                                    <select name="state" id="form_state" class="form-control">
+                                        <option value="">Selecione...</option>
+                                        <option value="AC">Acre</option>
+                                        <option value="AL">Alagoas</option>
+                                        <option value="AP">Amapá</option>
+                                        <option value="AM">Amazonas</option>
+                                        <option value="BA">Bahia</option>
+                                        <option value="CE">Ceará</option>
+                                        <option value="DF">Distrito Federal</option>
+                                        <option value="ES">Espírito Santo</option>
+                                        <option value="GO">Goiás</option>
+                                        <option value="MA">Maranhão</option>
+                                        <option value="MT">Mato Grosso</option>
+                                        <option value="MS">Mato Grosso do Sul</option>
+                                        <option value="MG">Minas Gerais</option>
+                                        <option value="PA">Pará</option>
+                                        <option value="PB">Paraíba</option>
+                                        <option value="PR">Paraná</option>
+                                        <option value="PE">Pernambuco</option>
+                                        <option value="PI">Piauí</option>
+                                        <option value="RJ">Rio de Janeiro</option>
+                                        <option value="RN">Rio Grande do Norte</option>
+                                        <option value="RS">Rio Grande do Sul</option>
+                                        <option value="RO">Rondônia</option>
+                                        <option value="RR">Roraima</option>
+                                        <option value="SC">Santa Catarina</option>
+                                        <option value="SP">São Paulo</option>
+                                        <option value="SE">Sergipe</option>
+                                        <option value="TO">Tocantins</option>
+                                    </select>
+                                </div>
+                            
+                            </div>
+
+                            <div class="col-md-6 col-sm-6">
+
+                                <div class="form-group">
+
+                                    <h5>Sexo</h5>
+        
+                                    <label for="form_gender_M">
+                                        <input type="radio" name="gender" id="form_gender_M" value="M"> Masculino
+                                    </label>
+        
+                                    <label for="form_gender_F">
+                                        <input type="radio" name="gender" id="form_gender_F" value="F"> Feminino
+                                    </label>
+        
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-md-12 col-sm-12">
+
+                                <div class="form-group">
+                                    <label for="form_bio">Sua biografia</label>
+                                    <textarea name="bio" id="form_bio" cols="30" rows="5" class="form-control"></textarea>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-success">Cadastrar</button>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>Hcode Treinamentos. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="jquery.min.js"></script>
+
+    <script>
+    
+        $(document).ready(function(){
+            $('#books_list tbody').on('click', 'td', function(e){
+    
+            $('#books_list tbody td').removeClass('trselected')
+
+            $(this).addClass('trselected')
+
+            })
+            $('#btn_add_book').on('click', function(){
+                let tr =`
+                <tr>
+                    <td>Til</td>
+                    <td>José de alencar</td>
+                </tr>
+                `
+                $('#books_list tbody').append(tr)
+            })
+              
+           
+        });
+        
+    </script>
+
+</body>
+</html>

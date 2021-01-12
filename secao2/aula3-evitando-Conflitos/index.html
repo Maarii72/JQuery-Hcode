@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evitando conflitos</title>
+    
+    
+</head>
+<body>
+    <h1 id="title">Esse é o meu terceiro código JQuery</h1>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        let $2 = jQuery.noConflict()
+
+        $2(document).ready(function(){
+            $2('h1').css('text-decoration','underline')
+        })
+    </script>
+
+   
+</body>
+</html>

@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+}
+
+header .row {
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.logo img {
+    width: 200px;
+}
+
+header h1 {
+    padding: 3px;
+    font-family: 'Times New Roman', Times, sans-serif;
+}
+
+.trselected {
+    background: black !important;
+    color: white;
+}
+
+.formulario, #form_login {
+    margin-top: 30px;
+}
+
+.selected_section {
+    color: red;
+}
+
+footer {
+    margin-top: 50px;
+    background-color: black;
+    padding: 10px 0;
+}
+
+footer p {
+    color: orange;
+    margin-bottom: 0;
+}

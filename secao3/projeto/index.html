@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Home Page</title>
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    </head>
+    <body>
+
+        <header>
+
+            <form action="" id="register">
+
+                <p>Cadastre-se</p>
+                <div class="field"><input type="text" placeholder="Digite seu nome..."></div>
+                <div class="field"><input type="email" disabled placeholder="Digite seu e-mail..."></div>
+                <div class="field"><input type="date" placeholder="Data de nascimento..."></div>
+                <div class="field">
+                    <label><input type="radio" name="gender" value="M"><span>Masculino</span></label>
+                    <label><input type="radio" name="gender" value="F"><span>Feminino</span></label>
+                </div>
+
+                <div class="field">
+                    <label>
+                        <input type="checkbox" name="logged"> <span>Me manter conectado</span>
+                    </label>
+                </div>
+
+                <button>Registrar</button>
+                <input type="button" name="button" value="Registrar 2">
+
+            </form>
+
+            <div class="bg-gradient">
+
+                <div class="header-border">
+
+                    <div id="logo">
+                        Business
+                    </div>
+
+                    <nav class="menu">
+                        <button type="button" class="open-menu"><i class="fas fa-bars"></i></button>
+                        <div class="backdrop"></div>
+                        <ul>
+                            <li class="close-menu"><button type="button"><i class="fas fa-times"></i></button></li>
+                            <li><a href="index.html" title="Página Inicial">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+
+                </div>
+
+            </div>
+
+        </header>
+        
+        <section class="home">
+
+            <main class="container">
+
+                <div class="title">
+                    <h1>Home Page</h1>
+                </div>
+
+                <p class="paragrafo">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis dolor excepturi temporibus maiores, fuga id porro officiis officia cupiditate debitis quasi et magni nostrum possimus eum, tempore libero ducimus omnis!</p>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, facilis sapiente fugit molestias nam quo recusandae eligendi doloribus reiciendis culpa. Dolorum illum magnam fugit reprehenderit. Expedita ipsum qui odit distinctio!
+                Ullam quam laboriosam officiis obcaecati sunt molestias expedita fugiat corrupti aliquid atque ratione accusamus voluptatibus, ducimus repellendus esse consequatur nostrum aliquam, minus commodi explicabo fuga, qui asperiores? Dicta, reprehenderit ut.
+                Eaque blanditiis quo praesentium molestias, aliquid ea labore eligendi iusto aut doloribus nam quia nostrum illo vel soluta reprehenderit suscipit quasi iure alias distinctio veritatis repellendus assumenda! Sequi, temporibus assumenda.</p>
+
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos id nam reprehenderit repudiandae officiis laboriosam, ipsum molestias corporis magni enim modi tempora iure blanditiis quo labore placeat at laudantium doloremque?Consequatur itaque odio ipsum soluta quas fugit quisquam, unde eum porro dolorem doloribus, nostrum expedita et adipisci vel distinctio fugiat voluptatem? Voluptatem quia aspernatur quaerat, laboriosam ratione ipsa doloremque adipisci.</p>
+
+                <div class="cars">
+
+                    <h3>Carros</h3>
+                    <ul class="cars_list">
+                        <li data-ano="1983">Uno <span> - Fiat</span></li>
+                        <li data-ano="1996">Palio</li>
+                        <li data-ano="2013">Ônix <span> - GM</span></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+    
+                </div>
+
+                <div class="cars">
+
+                    <h3>Carros</h3>
+                    <ul class="cars_list">
+                        <li data-ano="1931">Porsche</li>
+                        <li data-ano="1939">Ferrari <span> - Itália</span></li>
+                        <li data-ano="1948">Land Rover</li>
+                        <li data-ano="1963">Lamborghini</li>
+                        <li data-ano="2003">Fusca</li>
+                    </ul>
+    
+                </div>
+
+                <button type="button" id="toggle_cars">Exibir/Ocultar os carros</button>
+
+            </main>
+
+        </section>
+
+        <footer>
+
+            <div class="container">
+
+                <p>Todos os direitos reservados</p>
+
+                <nav class="menu">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+
+        </footer>
+
+        <script src="jquery.min.js"></script>
+
+        <script type="text/javascript">
+           
+
+      
+
+      
+            $(document).ready(function(){
+
+                $('#toggle_cars').click(function(){
+
+                    let hiddenCars = $('.cars_list li:hidden').length;
+                    let method = (hiddenCars > 0) ? 'show' : 'hide';
+
+                    eval(`$('.cars_list li').${method}()`);                    
+
+                });
+
+                $.expr[':'].carsCentury21 = function(el) {
+
+                    return ($(el).data('ano') > 2000);
+
+                }
+
+                $.expr[':'].carsBeforeYear = $.expr.createPseudo(function(year){
+
+                    return function(el) {
+
+                        return ($(el).data('ano') < year);
+
+                    }
+
+                });
+
+                // Criando nosso próprio filtro
+                // $('.cars_list li:carsCentury21').css('font-size', '30px')
+
+            });
+
+        </script>
+
+    </body>
+</html>

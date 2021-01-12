@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+}
+
+header .row {
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.logo img {
+    width: 200px;
+}
+
+header h1 {
+    padding: 3px;
+    font-family: 'Times New Roman', Times, sans-serif;
+}
+
+section h2 {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.courses_list {
+    margin: 25px 0;
+}
+
+.courses_list img {
+    width: 100px;
+}
+
+.courses_list .course_item {
+    text-align: center;
+}
+
+.courses_list .course_item_inner {
+    height: 200px;
+}
+
+footer {
+    margin-top: 50px;
+    background-color: black;
+    padding: 10px 0;
+}
+
+footer p {
+    color: orange;
+    margin-bottom: 0;
+}
