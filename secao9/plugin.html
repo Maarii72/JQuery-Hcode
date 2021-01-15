@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plugins</title>
+</head>
+<body>
+    <h1>Hcode Treinamentos</h1>
+
+    <h2>Seção de Plugins</h2>
+
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script>
+
+        (function($){
+            $.fn.changeText =function(){
+            this.css('font-size', '50px')
+
+            return this
+        }
+
+        })(jQuery)
+       
+        $(() => {
+
+        })
+    </script>
+</body>
+</html>
