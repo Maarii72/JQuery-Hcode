@@ -14,16 +14,40 @@
     <script>
 
         (function($){
-            $.fn.changeText =function(){
-            this.css('font-size', '50px')
+            $.fn.changeText =function(params){
+                let defaults = {
+                fontSize:30,
+                color: '#ccc',
+                fontFamily: 'Verdana'
+                }
+
+                let options = $.extend(defaults, params)
+                    
+                
+
+            //percorre o array
+            return this.each(function(){
+                $(this).css({
+                    'font-size': options.fontSize + 'px',
+                    'color': options.color,
+                    'font-famuly': options.fontFamily
+                })
 
             return this
+            })
+
+            
         }
 
         })(jQuery)
        
         $(() => {
 
+            $('h1').changeText({
+                fontSize: 40,
+                fontFamily: 'Arial'
+
+            })
         })
     </script>
 </body>
