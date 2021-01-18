@@ -1,5 +1,5 @@
 {
-  "name": "select2",
+  "name": "projeto-select2",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,5 +8,11 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.5.3",
+    "jquery": "^3.5.1",
+    "js": "^0.1.0",
+    "select2": "^4.0.13"
+  }
 }
